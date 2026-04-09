@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WalkTime</title>
+    <title>WalkTime — Instant Loop Walking Routes</title>
+    <meta name="description" content="WalkTime generates loop walking routes on your iPhone in seconds. Pick how long you want to walk, get a route back to your start.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -21,10 +22,30 @@
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.2);
             text-align: center;
-            max-width: 400px;
+            max-width: 440px;
         }
-        h1 { color: #333; margin-bottom: 10px; font-size: 2em; }
-        p { color: #666; margin-bottom: 30px; }
+        h1 { color: #333; margin-bottom: 8px; font-size: 2em; }
+        .tagline { color: #666; margin-bottom: 24px; font-size: 1.05em; }
+        .features {
+            text-align: left;
+            margin-bottom: 28px;
+            padding: 0 8px;
+        }
+        .features li {
+            color: #444;
+            margin-bottom: 8px;
+            list-style: none;
+            padding-left: 24px;
+            position: relative;
+            font-size: 0.95em;
+        }
+        .features li::before {
+            content: "\2713";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
         .links a {
             display: block;
             padding: 12px 24px;
@@ -36,16 +57,34 @@
             transition: background 0.2s;
         }
         .links a:hover { background: #5a6fd6; }
+        .links a.secondary {
+            background: transparent;
+            color: #667eea;
+            border: 1px solid #667eea;
+        }
+        .links a.secondary:hover { background: #f5f5f7; }
+        .pricing {
+            color: #888;
+            font-size: 0.85em;
+            margin-top: 16px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>WalkTime</h1>
-        <p>Generate and follow walking routes</p>
+        <p class="tagline">Pick how long you want to walk. Get a loop route back to where you started — instantly.</p>
+        <ul class="features">
+            <li>Instant loop routes from your current location</li>
+            <li>Visual navigation with live map and countdown timer</li>
+            <li>6 duration presets: 10, 15, 20, 30, 45, or 60 minutes</li>
+            <li>1 free route with all features, then $4.99 once for unlimited</li>
+        </ul>
         <div class="links">
             <a href="/privacy/">Privacy Policy</a>
-            <a href="/support/">Support</a>
+            <a href="/support/" class="secondary">Support</a>
         </div>
+        <p class="pricing">Free to try &middot; $4.99 one-time for WalkTime Unlimited</p>
     </div>
 </body>
 </html>
